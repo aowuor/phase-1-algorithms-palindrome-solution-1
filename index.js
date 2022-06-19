@@ -1,10 +1,17 @@
 function isPalindrome(word) {
   // Write your algorithm here
-}
+// Compare the word elements at similar index on the right and left side of the word
 
 /* 
   Add your pseudocode here
 */
+  for(let i=0;i<word.length; i++){
+    const k = word.length-1-i;
+    if(word[i] !== word[k]){
+      return false;
+    } 
+  }
+  return true;
 
 /*
   Add written explanation of your solution here
@@ -21,5 +28,5 @@ if (require.main === module) {
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
 }
-
+}
 module.exports = isPalindrome;
